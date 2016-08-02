@@ -1,0 +1,19 @@
+# UniFi Controller systemd Service File
+# http://www.csamuel.org/2015/05/10/unifi-systemd-unit-file-for-ubuntu-15-04
+
+[Unit]
+Description=UniFi Wireless AP Control System
+After=rsyslog.target network.target
+
+[Service]
+Type=simple
+User=root
+
+ExecStart=/usr/bin/jsvc -nodetach -home /usr/lib/jvm/default-java -cp /usr/share/java/commons-daemon.jar:/usr/lib/unifi/lib/ace.jar -pidfile /var/run/unifi/unifi.pid -procname unifi -outfile SYSLOG -errfile SYSLOG -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xmx1024M com.ubnt.ace.Launcher start
+ExecStop=/usr/bin/jsvc -home /usr/lib/jvm/default-java -cp /usr/share/java/commons-daemon.jar:/usr/lib/unifi/lib/ace.jar -pidfile /var/run/unifi/unifi.pid -procname unifi -outfile SYSLOG -errfile SYSLOG -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xmx1024M -stop com.ubnt.ace.Launcher stop
+
+SuccessStartStatus=0
+SuccessExitStatus=255
+
+[Install]
+WantedBy=multi-user.target

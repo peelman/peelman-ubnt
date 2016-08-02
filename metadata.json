@@ -1,0 +1,37 @@
+{
+  "name": "peelman-ubnt",
+  "version": "1.0.0",
+  "author": "Nick Peelman <nick@peelman.us>",
+  "summary": "Provides an interface for managing Ubiquiti UniFi Apt source, key, and the UniFi Package",
+  "license": "Apache-2.0",
+  "source": "https://github.com/peelman/peelman-unifi",
+  "project_page": "https://github.com/peelman/peelman-unifi",
+  "issues_url": "https://github.com/peelman/peelman-unifi/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.3.0 < 2015.4.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/apt","version_requirement":">= 2.0.0"}
+  ]
+}

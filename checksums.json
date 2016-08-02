@@ -1,0 +1,11 @@
+{
+  "CHANGELOG.md": "2c0501ec43b107b3c3476d8b61aea296",
+  "LICENSE": "3b83ef96387f14655fc854ddc3c6bd57",
+  "NOTICE": "52a41bb90a833408c70bc14f74002b3e",
+  "README.md": "5bb2eb68860863719bfac7c61e00e568",
+  "files/systemd.unifi.service": "f0a643fbd99fa464822bb6fe024a18c9",
+  "manifests/apt.pp": "33ae5464f4fea1a561d575316e0dcf23",
+  "manifests/init.pp": "2b6615d8d01ffa18b4bef352f0487e28",
+  "manifests/unifi.pp": "a4fc7b137f8a89d8b77f50ed950d1e31",
+  "metadata.json": "64f0687288084546dc6adc7e3be8c86e"
+}
